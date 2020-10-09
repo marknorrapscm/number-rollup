@@ -1,16 +1,18 @@
 {
 	"name": "number-rollup",
-	"version": "1.0.0",
-	"description": "VanillaJS implementation of an animated ",
+	"version": "1.0.1",
+	"description": "VanillaJS implementation of an animated rising / falling number",
 	"author": "marknorrapscm",
-	"main": "index.js",
+	"browser": "dist/index.js",
+	"main": "dist/index.js",
+	"module": "dist/index.js",
 	"files": [
 		"dist/index.js"
 	],
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "URLTOGITHUB"
+		"url": "https://github.com/marknorrapscm/number-rollup"
 	},
 	"scripts": {
 		"dev": "webpack-dev-server --open --config=config/webpack.dev.js",
