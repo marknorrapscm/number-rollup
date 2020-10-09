@@ -14,19 +14,21 @@ module.exports = {
 	output: {
 		path: path.resolve(ROOT_DIRECTORY, "dist"),
 		filename: "index.js",
+		library: "number-rollup",
+		libraryTarget: "amd",
 	},
 	module: {
 		rules: [
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				use: {
-					loader: "babel-loader",
-					options: {
-						cacheDirectory: true,
-						configFile: path.resolve(ROOT_DIRECTORY, "config/babel.config.js"),
-					},
-				},
+				// use: {
+				// 	loader: "babel-loader",
+				// 	options: {
+				// 		cacheDirectory: true,
+				// 		configFile: path.resolve(ROOT_DIRECTORY, "config/babel.config.js"),
+				// 	},
+				// },
 			},
 		],
 	},
