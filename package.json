@@ -1,0 +1,47 @@
+{
+	"name": "number-rollup",
+	"version": "1.0.0",
+	"description": "VanillaJS implementation of an animated ",
+	"author": "marknorrapscm",
+	"main": "index.js",
+	"files": [
+		"dist/index.js"
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "URLTOGITHUB"
+	},
+	"scripts": {
+		"dev": "webpack-dev-server --open --config=config/webpack.dev.js",
+		"build": "webpack --config=config/webpack.prod.js",
+		"test": "echo \"No test specified\""
+	},
+	"devDependencies": {
+		"@babel/core": "^7.9.0",
+		"@babel/runtime": "^7.9.2",
+		"@babel/plugin-proposal-nullish-coalescing-operator": "^7.8.3",
+		"@babel/plugin-proposal-optional-chaining": "^7.9.0",
+		"@babel/plugin-transform-runtime": "^7.9.0",
+		"@babel/preset-env": "^7.9.0",
+		"babel-loader": "^8.1.0",
+		"clean-webpack-plugin": "^3.0.0",
+		"compression-webpack-plugin": "^3.1.0",
+		"core-js": "^3.6.4",
+		"eslint": "^7.10.0",
+		"eslint-config-prettier": "^6.12.0",
+		"eslint-plugin-prettier": "^3.1.4",
+		"html-webpack-plugin": "^4.0.4",
+		"prettier": "^2.1.2",
+		"terser-webpack-plugin": "^2.3.5",
+		"webpack": "^4.42.1",
+		"webpack-cli": "^3.3.11",
+		"webpack-dev-server": "^3.10.3"
+	},
+	"dependencies": {},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not op_mini all"
+	]
+}

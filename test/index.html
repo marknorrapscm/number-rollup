@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>number-rollup test</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.1/styles/monokai-sublime.min.css"
+		integrity="sha512-/l4iViNMhxR5MhSlak3Yw/L/7qUBifVy7MpLjeJTc8BPMRFbGplGN0xqufCDwhSdxSnVgy+e/OYsNnU75K3yyQ=="
+		crossorigin="anonymous" />
+	<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet" type="text/css">
+
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/prism-twilight.min.css"
+		integrity="sha512-akb4nfKzpmhujLUyollw5waBPeohuVf0Z5+cL+4Ngc4Db+V8szzx6ZTujguFjpmD076W8LImVIbOblmQ+vZMKA=="
+		crossorigin="anonymous" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/prism.min.js"
+		integrity="sha512-WkVkkoB31AoI9DAk6SEEEyacH9etQXKUov4JRRuM1Y681VsTq7jYgrRw06cbP6Io7kPsKx+tLFpH/HXZSZ2YEQ=="
+		crossorigin="anonymous"></script> -->
+
+	<style>
+		body {
+			background-color: #333;
+		}
+
+		.centered {
+			display: flex;
+			height: 100vh;
+		}
+
+		.centered>div {
+			margin: auto;
+		}
+
+		hr {
+			background-color: #dbdbdb;
+		}
+
+		pre {
+			margin: 0;
+		}
+
+		pre:last-of-type {
+			margin-top: -50px;
+			margin-bottom: -40px;
+		}
+
+		code {
+			padding: 0;
+		}
+
+		.hidden {
+			display: none;
+		}
+
+		h1 {
+			color: #FFF;
+			font-size: 5.5rem;
+			margin-top: -200px;
+			padding-bottom: 6rem;
+			font-family: "Lobster";
+			color: #ce4eb0;
+		}
+
+		.link-image img {
+			width: 40px;
+			margin: 10px 0 10px 10px;
+			opacity: 0.5;
+		}
+
+		.link-image img:hover {
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+	<a class="link-image" href="#">
+		<img src="https://i.imgur.com/Rpcc60A.png" />
+	</a>
+	<a class="link-image" href="#">
+		<img src="https://i.imgur.com/iYLInIb.png" />
+	</a>
+
+	<div class="centered">
+		<div class="container">
+
+			<div class="demo">
+				<div class="demo__buttons text-center">
+					<button class="btn btn-success mr-4" id="example-1-btn">Run Example 1</button>
+					<button class="btn btn-secondary mr-4" id="example-1">0</button>
+					<button class="btn btn-dark view-source-btn" data-for="example-1-demo-code">View Source</button>
+				</div>
+				<div class="demo__code hidden" id="example-1-demo-code">
+					<pre>
+						<code class="language-html">
+							<button id="example-1">0</button>
+						</code>
+					</pre>
+					<pre>
+						<code class="language-javascript">
+							import numberRollup from "number-rollup";
+
+							numberRollup({
+								id: "example-1",
+								startNumber: 0,
+								endNumber: 500,
+								duration: 500,
+								formatNumber: myCustomFormatter
+							});
+
+							const myCustomFormatter = function (v) {
+								return `$${v}`;
+							};
+						</code>
+					</pre>
+				</div>
+			</div>
+
+			<hr />
+
+			<div class="demo">
+				<div class="demo__buttons text-center">
+					<button class="btn btn-success mr-4" id="example-2-btn">Run Example 2</button>
+					<button class="btn btn-secondary mr-4" id="example-2">5000</button>
+					<button class="btn btn-dark view-source-btn" data-for="example-2-demo-code">View Source</button>
+				</div>
+				<div class="demo__code hidden" id="example-2-demo-code">
+					<pre>
+						<code class="language-html">
+							<button id="example-2">5000</button>
+						</code>
+					</pre>
+					<pre>
+						<code class="language-javascript">
+							import numberRollup from "number-rollup";
+
+							numberRollup({
+								id: "example-2",
+								startNumber: 5000,
+								endNumber: 250,
+								duration: 500,
+							});
+						</code>
+					</pre>
+				</div>
+			</div>
+
+			<hr />
+
+			<div class="demo">
+				<div class="demo__buttons text-center">
+					<button class="btn btn-success mr-4" id="example-3-btn">Run Example 3</button>
+
+					<button class="btn btn-secondary number-rollup" data-number-rollup-start="0" data-number-rollup-end="500"
+						data-number-rollup-duration="250">
+						0
+					</button>
+					<button class="btn btn-secondary number-rollup" data-number-rollup-start="100" data-number-rollup-end="100000"
+						data-number-rollup-duration="1000">
+						0
+					</button>
+					<button class="btn btn-secondary number-rollup" data-number-rollup-start="10000" data-number-rollup-end="0"
+						data-number-rollup-duration="1000">
+						0
+					</button>
+
+					<button class="btn btn-dark ml-4 view-source-btn" data-for="example-3-demo-code">View Source</button>
+				</div>
+				<div class="demo__code hidden" id="example-3-demo-code">
+					<pre>
+						<code class="language-html">
+							<button class="number-rollup" data-number-rollup-start="0" data-number-rollup-end="500" data-number-rollup-duration="250">0</button>
+							<button class="number-rollup" data-number-rollup-start="100" data-number-rollup-end="100000"data-number-rollup-duration="1000">0</button>
+							<button class="number-rollup" data-number-rollup-start="10000" data-number-rollup-end="0"data-number-rollup-duration="1000">0</button>
+						</code>
+					</pre>
+					<pre>
+						<code class="language-javascript">
+							import numberRollup from "number-rollup";
+
+							numberRollup();
+						</code>
+					</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
