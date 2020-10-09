@@ -1,6 +1,6 @@
 {
 	"name": "number-rollup",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "VanillaJS implementation of an animated rising / falling number",
 	"author": "marknorrapscm",
 	"browser": "dist/index.js",

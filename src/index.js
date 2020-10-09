@@ -51,8 +51,6 @@ const shouldAnimationContinue = (currentNumber, direction, endNumber) => {
 };
 
 /**
- * Path: file:///C:/Work/number-rollup/test/index.html
- *
  * Note: we could pretty easily implement easing in/out using the formulas
  * presented here: http://gizma.com/easing/
  * It would involve changing the getNewNumer() function and, instead of

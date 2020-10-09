@@ -63,18 +63,3 @@ const formatString = (value) => {
 const myCustomFormatter = function (v) {
 	return `$${v}`;
 };
-
-/**
- * TODO:
- *
- * 1. Add more info to the index.html
- * 	a. Buttons to trigger animation
- *  b. Code in a dropdown
- * 2. Add to Github
- * 3. Create ReadME detailing how to run it
- * 4. Read about NPM - do we publish entire thing or only files we specify?
- * 5. Publish the example to Github pages
- * 6. Try using the package in another project - does it work?
- * 7. Finally, publish to NPM
- *
- */
