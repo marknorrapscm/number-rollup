@@ -13,15 +13,20 @@
 
 https://marknorrapscm.github.io/number-rollup/
 
-### Features
+## Features
 
--   Easily create an animated rising / falling number
+-   Smooth rising / falling number animations
 -   VanillaJS
 -   Zero dependencies
 -   2KB gzipped
 -   No CSS; styling is under your control
+-   Uses `requestAnimationFrame()` rather than `setTimeout()`
 
-### Installation
+##### Note
+
+<small>Some browsers have options that implement anti-fingerprinting techniques which significantly reduce the millisecond accuracy of `new Date()` and `performance.now()`. These options are not enabled by default in Firefox (`privacy.resistFingerprinting`) or Chrome but, if they are, the animation won't run as smoothly.</small>
+
+## Installation
 
 ```sh
 npm install number-rollup --save
@@ -69,7 +74,7 @@ import numberRollup from "number-rollup";
 numberRollup();
 ```
 
-### Options
+## Options
 
 `id`: _string_ <br />
 The ID of the target element when creating a single animation.
