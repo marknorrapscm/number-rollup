@@ -1,4 +1,13 @@
+# http://editorconfig.org
 root = true
-indent_style = tab
-indent_size = 4
+
+[*]
 charset = utf-8
+indent_size = 4
+indent_style = tabs
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+max_line_length = 0
+trim_trailing_whitespace = false
