@@ -1,4 +1,4 @@
-import numberRollup from "../src/index";
+import numberRollup from "../../src/index";
 
 const setupHighlightJs = () => {
 	document.querySelectorAll("code").forEach((element) => {

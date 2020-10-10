@@ -4,21 +4,21 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ROOT_DIRECTORY = process.cwd();
 
 module.exports = {
-	mode: "development",
+	mode: "production",
 	stats: "minimal",
 	entry: {
 		main: path.resolve(ROOT_DIRECTORY, "demo/src/dev.js"),
 	},
 	output: {
-		path: path.resolve(ROOT_DIRECTORY, "build"),
+		path: path.resolve(ROOT_DIRECTORY, "demo/dist"),
 		filename: "index.js",
 	},
-	devServer: {
-		contentBase: path.resolve(ROOT_DIRECTORY, "build"),
-		compress: true,
-		port: 3000,
-		overlay: true,
-	},
+	// devServer: {
+	// 	contentBase: path.resolve(ROOT_DIRECTORY, "build"),
+	// 	compress: true,
+	// 	port: 3000,
+	// 	overlay: true,
+	// },
 	devtool: "cheap-module-eval-source-map",
 	module: {
 		rules: [
