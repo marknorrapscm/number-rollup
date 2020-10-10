@@ -17,6 +17,7 @@
 	"scripts": {
 		"dev": "webpack-dev-server --open --config=config/webpack.dev.js",
 		"build": "webpack --config=config/webpack.prod.js",
+		"build-demo": "webpack --config=config/webpack.demo.js",
 		"test": "echo \"No test specified\""
 	},
 	"devDependencies": {

@@ -36,3 +36,5 @@ jspm_packages/
 
 # Yarn Integrity file
 .yarn-integrity
+
+demo/dist
