@@ -4,11 +4,12 @@ import draw from "./draw";
 export default (userOptions) => {
 	const targets = getTargets(userOptions);
 	targets.forEach((target) => {
-		runForSingleTarget(target);
+		runAnimation(target);
 	});
 };
 
-const runForSingleTarget = (target) => {
+const runAnimation = (target) => {
+	markTargetAsActive(target.domElement, true);
 	let currentNumber = target.startNumber;
 	let lastIntegerWritten = 0;
 	let lastRunTime = performance.now();
@@ -29,10 +30,22 @@ const runForSingleTarget = (target) => {
 		if (shouldAnimationContinue(currentNumber, target.direction, target.endNumber)) {
 			lastRunTime = performance.now();
 			requestAnimationFrame(run);
+		} else {
+			markTargetAsActive(target.domElement, false);
 		}
 	};
 
 	run();
+};
+
+const markTargetAsActive = (domElement, isActive) => {
+	const isActiveClass = "number-rollup-is-active";
+
+	if (isActive) {
+		domElement.classList.add(isActiveClass);
+	} else {
+		domElement.classList.remove(isActiveClass);
+	}
 };
 
 const getNewNumber = (incrementPerMillisecond, millisecondsElapsed, existingNumber) => {

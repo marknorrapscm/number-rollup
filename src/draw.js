@@ -16,13 +16,13 @@ const getNumberToDraw = (newNumberRounded, target) => {
 const getNumber = (newNumberRounded, endNumber, direction) => {
 	let numberToUse;
 
-	if (direction == "ascending") {
+	if (direction === "ascending") {
 		if (newNumberRounded < endNumber) {
 			numberToUse = newNumberRounded;
 		} else {
 			numberToUse = endNumber;
 		}
-	} else if (direction == "descending") {
+	} else if (direction === "descending") {
 		if (newNumberRounded > endNumber) {
 			numberToUse = newNumberRounded;
 		} else {

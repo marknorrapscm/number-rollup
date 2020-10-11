@@ -69,6 +69,15 @@
 		.link-image img:hover {
 			opacity: 1;
 		}
+
+		.form-inline {
+			justify-content: center;
+		}
+
+		.w-90 {
+			max-width: 90px;
+
+		}
 	</style>
 </head>
 <body>
@@ -182,6 +191,23 @@
 					</pre>
 				</div>
 			</div>
+
+			<hr />
+
+			<div class="demo">
+				<div class="demo__buttons text-center">
+					<form class="form-inline" id="custom-example-form">
+						<input class="form-control w-90 mr-2" type="text" placeholder="Start" name="start" />
+						<input class="form-control w-90 mr-2" type="text" placeholder="End" name="end" />
+						<input class="form-control w-90 mr-2" type="text" placeholder="Duration" name="duration" />
+						<button class="btn btn-success mr-2" id="custom-example-btn" onclick="return false">
+							Run Custom Example
+						</button>
+						<button class="btn btn-secondary mr-2" id="custom-example">0</button>
+					</form>
+				</div>
+			</div>
+
 		</div>
 	</div>
 
