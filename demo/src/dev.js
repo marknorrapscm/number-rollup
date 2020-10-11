@@ -37,6 +37,21 @@ const setupClickEvents = () => {
 		numberRollup();
 	});
 
+	document.getElementById("custom-example-btn").addEventListener("click", () => {
+		const form = document.getElementById("custom-example-form");
+		const formData = new FormData(form);
+		const startNumber = Number(formData.get("start"));
+		const endNumber = Number(formData.get("end"));
+		const duration = Number(formData.get("duration"));
+
+		numberRollup({
+			id: "custom-example",
+			startNumber,
+			endNumber,
+			duration,
+		});
+	});
+
 	document.querySelectorAll(".view-source-btn").forEach((element) => {
 		element.addEventListener("click", function () {
 			const viewSourceFor = this.getAttribute("data-for");
