@@ -2,7 +2,7 @@
 
 <div align="center" markdown="1">
 
-[![gzip size](http://img.badgesize.io/https://unpkg.com/number-rollup/dist/index.js)](https://unpkg.com/number-rollup/dist/index.js)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/number-rollup?color=success&label=size)
 [![npm](https://img.shields.io/npm/v/number-rollup)](https://www.npmjs.com/package/number-rollup)
 [![npm](https://img.shields.io/npm/l/number-rollup)](https://www.npmjs.com/package/number-rollup)
 [![npm](https://img.shields.io/npm/dw/number-rollup)](https://www.npmjs.com/package/number-rollup)
@@ -18,7 +18,7 @@ https://marknorrapscm.github.io/number-rollup/
 -   Smooth rising / falling number animations
 -   VanillaJS
 -   Zero dependencies
--   2KB gzipped
+-   1.3KB gzipped
 -   No CSS; styling is under your control
 -   Uses `requestAnimationFrame()` rather than `setTimeout()`
 
