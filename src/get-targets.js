@@ -44,12 +44,14 @@ const readTargetsSpecifiedInDom = (userOptions) => {
 	const domElements = document.querySelectorAll(".number-rollup");
 	const targetElements = [];
 
-	domElements.forEach((domElement) => {
+	for (let x = 0; x < domElements.length; x++) {
+		const domElement = domElements[x];
+
 		if (!isDomElementCurrentBeingAnimated(domElement)) {
 			const newTarget = generateTargetFromDomElement(domElement, userOptions);
 			targetElements.push(newTarget);
 		}
-	});
+	}
 
 	return targetElements;
 };

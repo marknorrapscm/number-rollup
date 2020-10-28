@@ -22,13 +22,6 @@ module.exports = {
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				// use: {
-				// 	loader: "babel-loader",
-				// 	options: {
-				// 		cacheDirectory: true,
-				// 		configFile: path.resolve(ROOT_DIRECTORY, "config/babel.config.js"),
-				// 	},
-				// },
 			},
 		],
 	},
@@ -73,11 +66,5 @@ module.exports = {
 				},
 			}),
 		],
-		// runtimeChunk: {
-		// 	name: (entrypoint) => `runtime-${entrypoint.name}`,
-		// },
-		// splitChunks: {
-		// 	chunks: "all",
-		// },
 	},
 };

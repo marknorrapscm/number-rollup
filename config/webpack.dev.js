@@ -29,7 +29,7 @@ module.exports = {
 					loader: "babel-loader",
 					options: {
 						cacheDirectory: true,
-						configFile: path.resolve(ROOT_DIRECTORY, "config/babel.config.js"),
+						configFile: path.resolve(ROOT_DIRECTORY, "babel.config.cjs"),
 					},
 				},
 			},
