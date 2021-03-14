@@ -29,16 +29,13 @@ const generateSingleTargetFromOptions = (userOptions) => {
 	const domElement = document.getElementById(userOptions.id);
 
 	if (!isDomElementAlreadyBeingAnimated(domElement)) {
-		const startNumber = Number(userOptions.startNumber);
-		const endNumber = Number(userOptions.endNumber);
-		const duration = Number(userOptions.duration);
-
 		return {
 			domElement,
-			startNumber,
-			endNumber,
-			duration,
-			formatNumber: userOptions.formatNumber
+			startNumber: Number(userOptions.startNumber),
+			endNumber: Number(userOptions.endNumber),
+			duration: Number(userOptions.duration),
+			formatNumber: userOptions.formatNumber,
+			easing: userOptions.easing || ""
 		};
 	}
 };
@@ -60,15 +57,12 @@ const readTargetsSpecifiedInDom = (userOptions) => {
 };
 
 const generateTargetFromDomElement = (domElement, userOptions) => {
-	const startNumber = Number(domElement.getAttribute("data-number-rollup-start"));
-	const endNumber = Number(domElement.getAttribute("data-number-rollup-end"));
-	const duration = Number(domElement.getAttribute("data-number-rollup-duration"));
-
 	return {
 		domElement,
-		startNumber,
-		endNumber,
-		duration,
+		startNumber: Number(domElement.getAttribute("data-number-rollup-start")),
+		endNumber: Number(domElement.getAttribute("data-number-rollup-end")),
+		duration: Number(domElement.getAttribute("data-number-rollup-duration")),
+		easing: domElement.getAttribute("data-number-rollup-easing") || "",
 		formatNumber: userOptions ? userOptions.formatNumber : undefined
 	};
 };

@@ -1,18 +1,23 @@
 import draw from "./draw";
+import getNewNumber from "./get-new-number";
 
 export default (target) => {
 	markTargetAsActive(target.domElement, true);
+	triggerAnimation(target);
+};
+
+const triggerAnimation = (target) => {
 	const startTime = performance.now();
 	let lastNumberDrawn = 0;
 	let timeLastNumberDrawn;
 
 	const run = () => {
 		const msElapsedSinceStart = performance.now() - startTime;
-
+		
 		if (msElapsedSinceStart !== timeLastNumberDrawn) {
 			const newNumber = getNewNumber(msElapsedSinceStart, target);
+
 			if (newNumber !== lastNumberDrawn) {
-				console.log("Drawing: " + newNumber);
 				draw(target, newNumber);
 				lastNumberDrawn = newNumber;
 				timeLastNumberDrawn = msElapsedSinceStart;
@@ -36,21 +41,6 @@ const markTargetAsActive = (domElement, isActive) => {
 		domElement.classList.add(isActiveClass);
 	} else {
 		domElement.classList.remove(isActiveClass);
-	}
-};
-
-const getNewNumber = (msElapsedSinceStart, target) => {
-	const { startNumber, endNumber, duration } = target;
-	const range = Math.max(startNumber, endNumber) - Math.min(startNumber, endNumber);
-	const incrementPerMillisecond = range / duration;
-	const newNumber = incrementPerMillisecond * msElapsedSinceStart;
-
-	if (startNumber > endNumber) {
-		const newNumberRounded = Math.floor(startNumber - newNumber);
-		return Math.max(newNumberRounded, endNumber);
-	} else {
-		const newNumberRounded = Math.floor(startNumber + newNumber);
-		return Math.min(newNumberRounded, endNumber);
 	}
 };
 
