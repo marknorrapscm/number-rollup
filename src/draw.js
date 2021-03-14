@@ -4,33 +4,9 @@ export default (target, newNumberRounded) => {
 };
 
 const getNumberToDraw = (newNumberRounded, target) => {
-	let numberToDraw = getNumber(newNumberRounded, target.endNumber, target.direction);
-
 	if (target.formatNumber) {
-		numberToDraw = target.formatNumber(numberToDraw);
-	}
-
-	return numberToDraw;
-};
-
-const getNumber = (newNumberRounded, endNumber, direction) => {
-	let numberToUse;
-
-	if (direction === "ascending") {
-		if (newNumberRounded < endNumber) {
-			numberToUse = newNumberRounded;
-		} else {
-			numberToUse = endNumber;
-		}
-	} else if (direction === "descending") {
-		if (newNumberRounded > endNumber) {
-			numberToUse = newNumberRounded;
-		} else {
-			numberToUse = endNumber;
-		}
+		return target.formatNumber(newNumberRounded);
 	} else {
-		console.error("getNumber() not set");
+		return newNumberRounded;
 	}
-
-	return numberToUse;
 };

@@ -113,7 +113,8 @@
 								startNumber: 0,
 								endNumber: 500,
 								duration: 500,
-								formatNumber: myCustomFormatter
+								formatNumber: myCustomFormatter,
+								easing: "easeInQuintic"
 							});
 
 							const myCustomFormatter = function (v) {
@@ -164,7 +165,7 @@
 						0
 					</button>
 					<button class="btn btn-secondary number-rollup" data-number-rollup-start="100" data-number-rollup-end="100000"
-						data-number-rollup-duration="1000">
+						data-number-rollup-duration="1000"  data-number-rollup-easing="easeOutQuintic">
 						0
 					</button>
 					<button class="btn btn-secondary number-rollup" data-number-rollup-start="10000" data-number-rollup-end="0"
@@ -178,7 +179,7 @@
 					<pre>
 						<code class="language-html">
 							<button class="number-rollup" data-number-rollup-start="0" data-number-rollup-end="500" data-number-rollup-duration="250">0</button>
-							<button class="number-rollup" data-number-rollup-start="100" data-number-rollup-end="100000"data-number-rollup-duration="1000">0</button>
+							<button class="number-rollup" data-number-rollup-start="100" data-number-rollup-end="100000"data-number-rollup-duration="1000" data-number-rollup-easing="easeOutQuintic">0</button>
 							<button class="number-rollup" data-number-rollup-start="10000" data-number-rollup-end="0"data-number-rollup-duration="1000">0</button>
 						</code>
 					</pre>
