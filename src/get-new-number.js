@@ -28,12 +28,10 @@ const applyEasing = (msElapsedSinceStart, target) => {
 			return Math.floor(((range * msElapsedSinceStart) / duration) + smallestNumber);
 		}
 		case "easein": {
-			console.log("EAST IN");
 			const t = msElapsedSinceStart / duration;
 			return Math.floor(range * t * t + smallestNumber);
 		}
 		case "easeout": {
-			console.log("EAST OUT");
 			const t = msElapsedSinceStart / duration;
 			return Math.floor((range * -1) * t * (t - 2) + smallestNumber) + 1;
 		}
@@ -42,7 +40,6 @@ const applyEasing = (msElapsedSinceStart, target) => {
 			return Math.floor(range * t * t * t * t * t + smallestNumber);
 		}
 		case "easeoutquintic": {
-			console.log("DETECTED");
 			const t = (msElapsedSinceStart / duration) - 1;
 			return Math.floor(range * ((t * t * t * t * t) + 1) + smallestNumber);
 		}
