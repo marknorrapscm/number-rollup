@@ -15,7 +15,7 @@ https://marknorrapscm.github.io/number-rollup/
 
 ## Features
 
--   Smooth rising / falling number animations
+-   Smooth rising / falling number animations with easing options
 -   VanillaJS
 -   Zero dependencies
 -   1.3KB gzipped
@@ -51,7 +51,9 @@ numberRollup({
 	id: "example-1",
 	startNumber: 0,
 	endNumber: 500,
-	duration: 500, // Milliseconds
+	duration: 500, // ms
+	formatNumber: (s) => `£${s}`, // optional
+	easing: "easeIn" 			  // optional
 });
 ```
 
@@ -90,3 +92,13 @@ The duration of the animation in milliseconds. Must be an integer.
 
 `formatNumber`: _function_ (optional)<br />
 A function that will be applied to the animated number each time before it is drawn. For example, turning `500` into `$500`. See the demo for a usage example.
+
+`easing`: _String_ (optional)<br />
+The easing function to be applied. Defaults to *linear* if none specified. Available options:
+
+* `linear`
+* `easeIn`
+* `easeOut`
+* `easeInQuintic`
+* `easeOutQuintic`
+* `easeInOut`

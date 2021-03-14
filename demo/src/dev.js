@@ -21,6 +21,7 @@ const setupClickEvents = () => {
 			endNumber: 500,
 			duration: 500,
 			formatNumber: myCustomFormatter,
+			easing: "easeInQuintic"
 		});
 	});
 

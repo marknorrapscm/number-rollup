@@ -1,35 +1,37 @@
 module.exports = {
-	env: {
-		browser: true,
-		es2021: true,
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"jest": true,
+		"node": true
 	},
-	extends: "plugin:prettier/recommended",
-	parserOptions: {
-		ecmaVersion: 12,
-		sourceType: "module",
+	"extends": "eslint:recommended",
+	"parserOptions": {
+		"ecmaVersion": 12,
+		"sourceType": "module",
 	},
-	plugins: ["prettier"],
-	rules: {
-		"prettier/prettier": "error",
-		"linebreak-style": 0,
-		indent: "off",
-		"comma-dangle": "off",
-		"class-methods-use-this": "off",
-		"quote-props": "off",
-		"default-case": "off",
-		"no-new": "off",
-		"import/no-cycle": "warn",
-		"max-len": [
-			"warn",
-			{
-				code: 120,
-			},
+	"rules": {
+		"indent": [
+			"error",
+			"tab"
 		],
-		"no-else-return": "off",
-		"no-use-before-define": "off",
-		"object-curly-newline": "off",
-		// "no-underscore-dangle": [{ enforceInMethodNames: false }],
-		"no-underscore-dangle": "warn",
-		"import/no-cycle": "off",
-	},
+		"linebreak-style": [
+			"error",
+			"windows"
+		],
+		"quotes": [
+			"error",
+			"double"
+		],
+		"semi": [
+			"error",
+			"always"
+		],
+		"no-unused-vars": [
+			"warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+		],
+		"react/prop-types": [
+			0
+		],
+	}
 };
