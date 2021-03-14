@@ -47,7 +47,7 @@ test("Check increment is being performed", () => {
 		expect(html).not.toBe("500");
 		expect(html).toBe("100");
 	} catch (e) {
-		console.log("E");
+		console.log(e);
 	}
 });
 
@@ -66,6 +66,6 @@ test("Check increment is being performed by DOM-specified settings", () => {
 		const html = document.querySelector(".number-rollup").innerHTML;
 		expect(html).toBe("500");
 	} catch (e) {
-		console.log("E");
+		console.log(e);
 	}
 });

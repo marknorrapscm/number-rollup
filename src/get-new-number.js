@@ -1,7 +1,6 @@
 /* eslint-disable indent */
 
 export default (msElapsedSinceStart, target) => {
-	console.log(target);
 	const { startNumber, endNumber } = target;
 
 	const newNumber = applyEasing(msElapsedSinceStart, target);
