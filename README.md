@@ -1,3 +1,7 @@
+> [!TIP]  
+> This was made to test publishing an npm package. It works and it should work indefinitely, but keep that in mind if you decide to use it in production.
+
+
 # number-rollup
 
 <div align="center" markdown="1">
